@@ -51,74 +51,80 @@ public class AddNewProduct extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Garamond", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("New Product");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Close");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(621, 11, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 128, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Category");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 159, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Price");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 193, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, -1, 30));
 
-        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNameKeyReleased(evt);
             }
         });
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 122, 274, -1));
+        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 274, -1));
 
-        txtCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(txtCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 156, 274, -1));
+        txtCategory.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        getContentPane().add(txtCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 274, -1));
 
-        txtPrice.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPrice.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtPrice.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPriceKeyReleased(evt);
             }
         });
-        getContentPane().add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 190, 274, -1));
+        getContentPane().add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 274, -1));
 
-        btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(0, 102, 0));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 224, -1, -1));
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
 
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnClear.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(102, 51, 0));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
             }
         });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 224, -1, -1));
+        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/small-page-background.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PBS Cafe Small.png"))); // NOI18N
         jLabel5.setText("jLabel5");
+        jLabel5.setMaximumSize(new java.awt.Dimension(700, 500));
+        jLabel5.setMinimumSize(new java.awt.Dimension(700, 500));
+        jLabel5.setPreferredSize(new java.awt.Dimension(700, 500));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
 
         pack();

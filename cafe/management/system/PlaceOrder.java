@@ -7,6 +7,7 @@ import common.OpenPdf;
 import dao.BillDao;
 import dao.CategoryDao;
 import dao.ProductDao;
+import dao.UserDao;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import javax.swing.table.TableModel;
 import model.Bill;
 import model.Category;
 import model.Product;
+import model.User;
 
 public class PlaceOrder extends javax.swing.JFrame {
     public int billId = 1;
@@ -125,6 +127,7 @@ public class PlaceOrder extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         lblGrandTotal = new javax.swing.JLabel();
         btnGenerateBillPrint = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -136,101 +139,107 @@ public class PlaceOrder extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Garamond", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Place Order");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Close");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1287, 11, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 120, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Bill ID:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 61, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("--");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 61, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Customer Details");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 95, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Name");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 126, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
 
-        txtCusName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtCusName.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtCusName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtCusNameKeyReleased(evt);
             }
         });
-        getContentPane().add(txtCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 154, 250, -1));
+        getContentPane().add(txtCusName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 250, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Mobile Number");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 189, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
-        txtCusMobileNo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtCusMobileNo.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        txtCusMobileNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCusMobileNoActionPerformed(evt);
+            }
+        });
         txtCusMobileNo.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtCusMobileNoKeyReleased(evt);
             }
         });
-        getContentPane().add(txtCusMobileNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 217, 250, -1));
+        getContentPane().add(txtCusMobileNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 210, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Email");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 251, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
-        txtCusEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtCusEmail.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtCusEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtCusEmailKeyReleased(evt);
             }
         });
-        getContentPane().add(txtCusEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 279, 250, -1));
+        getContentPane().add(txtCusEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 250, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Category");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 61, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, -1, -1));
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Garamond", 1, 14)); // NOI18N
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 92, 250, -1));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 250, -1));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Search");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 126, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, -1, -1));
 
-        txtSearch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSearch.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtSearchKeyReleased(evt);
             }
         });
-        getContentPane().add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 154, 250, -1));
+        getContentPane().add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 250, -1));
 
-        jTable1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Garamond", 1, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -246,64 +255,66 @@ public class PlaceOrder extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(332, 189, 250, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 250, 350));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Name");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 61, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, -1, -1));
 
-        txtProName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(txtProName, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 92, 250, -1));
+        txtProName.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        getContentPane().add(txtProName, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 250, -1));
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Price");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(978, 61, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 160, -1, -1));
 
-        txtProPrice.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(txtProPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(978, 92, 250, -1));
+        txtProPrice.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        getContentPane().add(txtProPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 180, 250, -1));
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Quantity");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 126, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 220, -1, -1));
 
-        jSpinner1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jSpinner1.setFont(new java.awt.Font("Garamond", 1, 14)); // NOI18N
         jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jSpinner1StateChanged(evt);
             }
         });
-        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 154, 250, -1));
+        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, 250, -1));
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Total");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(978, 126, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 220, -1, -1));
 
-        txtProTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(txtProTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(978, 154, 250, -1));
+        txtProTotal.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        getContentPane().add(txtProTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 240, 250, -1));
 
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnClear.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(102, 51, 0));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
             }
         });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 189, -1, -1));
+        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 280, -1, -1));
 
-        btnAddToCart.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddToCart.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnAddToCart.setForeground(new java.awt.Color(0, 102, 0));
         btnAddToCart.setText("Add to Cart");
         btnAddToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddToCartActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAddToCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(1115, 189, -1, -1));
+        getContentPane().add(btnAddToCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 280, 130, -1));
 
-        jTable2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTable2.setFont(new java.awt.Font("Garamond", 1, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -319,28 +330,33 @@ public class PlaceOrder extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 256, 565, 360));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 330, 570, 360));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Grand Total: Tk.");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 640, -1, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 710, -1, -1));
 
-        lblGrandTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblGrandTotal.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         lblGrandTotal.setForeground(new java.awt.Color(255, 255, 255));
         lblGrandTotal.setText("000");
-        getContentPane().add(lblGrandTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 640, -1, -1));
+        getContentPane().add(lblGrandTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 710, -1, -1));
 
-        btnGenerateBillPrint.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnGenerateBillPrint.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnGenerateBillPrint.setForeground(new java.awt.Color(0, 102, 0));
         btnGenerateBillPrint.setText("Generate Bill & Print");
         btnGenerateBillPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerateBillPrintActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGenerateBillPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(1057, 634, -1, -1));
+        getContentPane().add(btnGenerateBillPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 700, 200, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/full-page-background.PNG"))); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel15.setText("+880");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 40, 30));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PBS Cafe Big.png"))); // NOI18N
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -362,6 +378,14 @@ public class PlaceOrder extends javax.swing.JFrame {
         }
         String category = (String) jComboBox1.getSelectedItem();
         productNameByCategory(category);
+            
+        if(!userEmail.equals("admin@gmail.com")){
+        User user = UserDao.getENM(userEmail);  
+        txtCusName.setText(user.getName());
+        txtCusMobileNo.setText(user.getMobileNumber());
+        txtCusEmail.setText(user.getEmail());
+        }
+
     }//GEN-LAST:event_formComponentShown
 
     private void txtSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyReleased
@@ -431,7 +455,8 @@ public class PlaceOrder extends javax.swing.JFrame {
         String customerName = txtCusName.getText();
         String customerMobileNumber = txtCusMobileNo.getText();
         String customerEmail = txtCusEmail.getText();
-        SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy (hh:mm:ss)");        
+
         Date date = new Date();
         String todaydate = dFormat.format(date);
         String total = String.valueOf(grandTotal);
@@ -451,11 +476,11 @@ public class PlaceOrder extends javax.swing.JFrame {
         try{
             PdfWriter.getInstance(doc, new FileOutputStream(path + "" + billId +".pdf"));
             doc.open();
-            Paragraph cafeName = new Paragraph("PBS Cafe");
+            Paragraph cafeName = new Paragraph("PBS Café");
             doc.add(cafeName);
-            Paragraph starLine = new Paragraph("****************************************************************************************************************");
+            Paragraph starLine = new Paragraph("****************************************************************************************************************\n");
             doc.add(starLine);
-            Paragraph paragraph3 = new Paragraph("\tBill ID: "+billId+"\nCustomer Name: "+customerName+"\nTotal Amount: "+grandTotal+"");
+            Paragraph paragraph3 = new Paragraph("\tBill ID: "+billId+"\nDate & Time: "+todaydate+"\n\nCustomer Name: "+customerName+"\nMobile No: +880"+customerMobileNumber+"\nEmail: "+customerEmail+"\n\n\tTotal Amount: "+grandTotal+"");
             doc.add(paragraph3);
             doc.add(starLine);
             PdfPTable tb1 = new PdfPTable(4);
@@ -498,6 +523,10 @@ public class PlaceOrder extends javax.swing.JFrame {
             ((DefaultTableModel) jTable2.getModel()).removeRow(index);
         }
     }//GEN-LAST:event_jTable2MouseClicked
+
+    private void txtCusMobileNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCusMobileNoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCusMobileNoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -546,6 +575,7 @@ public class PlaceOrder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

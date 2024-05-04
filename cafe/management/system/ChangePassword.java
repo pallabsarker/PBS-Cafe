@@ -41,6 +41,8 @@ public class ChangePassword extends javax.swing.JFrame {
         txtConfirmPassword = new javax.swing.JPasswordField();
         btnUpdate = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        Show = new javax.swing.JButton();
+        Hide = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,78 +50,101 @@ public class ChangePassword extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Garamond", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Change Password");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Close");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(621, 11, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Old Password");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 107, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("New Password");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 148, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Confirm Password");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 189, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, -1, 30));
 
-        txtOldPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtOldPassword.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtOldPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtOldPasswordKeyReleased(evt);
             }
         });
-        getContentPane().add(txtOldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(298, 104, 230, -1));
+        getContentPane().add(txtOldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 290, -1));
 
-        txtNewPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNewPassword.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtNewPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNewPasswordKeyReleased(evt);
             }
         });
-        getContentPane().add(txtNewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(298, 145, 230, -1));
+        getContentPane().add(txtNewPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 290, -1));
 
-        txtConfirmPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtConfirmPassword.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtConfirmPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtConfirmPasswordKeyReleased(evt);
             }
         });
-        getContentPane().add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(298, 186, 230, -1));
+        getContentPane().add(txtConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 290, -1));
 
-        btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnUpdate.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(0, 102, 0));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
-        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(298, 227, -1, -1));
+        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(102, 51, 0));
         jButton3.setText("Clear");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(461, 227, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 380, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/small-page-background.png"))); // NOI18N
+        Show.setFont(new java.awt.Font("Garamond", 1, 11)); // NOI18N
+        Show.setForeground(new java.awt.Color(102, 51, 0));
+        Show.setText("Show");
+        Show.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShowActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Show, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 60, 20));
+
+        Hide.setFont(new java.awt.Font("Garamond", 1, 11)); // NOI18N
+        Hide.setForeground(new java.awt.Color(102, 51, 0));
+        Hide.setText("Hide");
+        Hide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HideActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Hide, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 60, 20));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PBS Cafe Small.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -153,6 +178,24 @@ public class ChangePassword extends javax.swing.JFrame {
         setVisible(false);
         new ChangePassword(userEmail).setVisible(true);
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void ShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowActionPerformed
+        // TODO add your handling code here:
+        Show.setVisible(false);
+        Hide.setVisible(true);
+        txtOldPassword.setEchoChar((char)0);
+        txtNewPassword.setEchoChar((char)0);
+        txtConfirmPassword.setEchoChar((char)0);
+    }//GEN-LAST:event_ShowActionPerformed
+
+    private void HideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HideActionPerformed
+        // TODO add your handling code here:
+        Show.setVisible(true);
+        Hide.setVisible(false);
+        txtOldPassword.setEchoChar('*');        
+        txtNewPassword.setEchoChar('*');
+        txtConfirmPassword.setEchoChar('*');
+    }//GEN-LAST:event_HideActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +233,8 @@ public class ChangePassword extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Hide;
+    private javax.swing.JButton Show;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;

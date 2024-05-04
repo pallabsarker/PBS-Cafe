@@ -70,8 +70,11 @@ public class Signup extends javax.swing.JFrame {
         btnSave = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        Show = new javax.swing.JButton();
+        Hide = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,48 +82,55 @@ public class Signup extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 102, 102));
+        jLabel1.setFont(new java.awt.Font("Garamond", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 51, 0));
         jLabel1.setText("Signup");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 156, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 51, 0));
         jLabel2.setText("Name");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 255, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 51, 0));
         jLabel3.setText("Email");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 289, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 50, 30));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 51, 0));
         jLabel4.setText("Mobile Number");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 323, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, 30));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 51, 0));
         jLabel5.setText("Address");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 357, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 70, 30));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 51, 0));
         jLabel6.setText("Password");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 391, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 51, 0));
         jLabel7.setText("Security Question");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 425, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, 30));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(102, 51, 0));
         jLabel8.setText("Answer");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 459, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, -1, 30));
 
-        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNameKeyReleased(evt);
             }
         });
-        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 252, 335, -1));
+        getContentPane().add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 280, 30));
 
-        txtEmail.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtEmail.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);
@@ -131,41 +141,46 @@ public class Signup extends javax.swing.JFrame {
                 txtEmailKeyReleased(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 286, 335, -1));
+        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 280, -1));
 
-        txtMobileNumber.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtMobileNumber.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        txtMobileNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMobileNumberActionPerformed(evt);
+            }
+        });
         txtMobileNumber.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtMobileNumberKeyReleased(evt);
             }
         });
-        getContentPane().add(txtMobileNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 320, 335, -1));
+        getContentPane().add(txtMobileNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, 240, -1));
 
-        txtAddress.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtAddress.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtAddress.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAddressKeyReleased(evt);
             }
         });
-        getContentPane().add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 354, 335, -1));
+        getContentPane().add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 280, -1));
 
-        txtSecurityQuestion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtSecurityQuestion.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtSecurityQuestion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtSecurityQuestionKeyReleased(evt);
             }
         });
-        getContentPane().add(txtSecurityQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 422, 335, -1));
+        getContentPane().add(txtSecurityQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 520, 280, -1));
 
-        txtAnswer.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtAnswer.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtAnswer.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtAnswerKeyReleased(evt);
             }
         });
-        getContentPane().add(txtAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 456, 335, -1));
+        getContentPane().add(txtAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 560, 280, -1));
 
-        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPassword.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
@@ -176,55 +191,78 @@ public class Signup extends javax.swing.JFrame {
                 txtPasswordKeyReleased(evt);
             }
         });
-        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 388, 335, -1));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 280, -1));
 
-        btnSave.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSave.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(0, 102, 0));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 515, -1, -1));
+        getContentPane().add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 610, 80, -1));
 
-        btnClear.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnClear.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(102, 51, 0));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
             }
         });
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 515, -1, -1));
+        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 610, -1, -1));
 
-        btnExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnExit.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 0, 0));
         btnExit.setText("Exit");
         btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(876, 515, 70, -1));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 650, 70, -1));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setText("Forgot Password ?");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 551, -1, -1));
-
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 102, 0));
         jButton5.setText("Login");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(875, 551, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 650, 80, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Login, Signup, FP.PNG"))); // NOI18N
-        jLabel9.setText("jLabel9");
+        jLabel10.setFont(new java.awt.Font("Garamond", 1, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("© PBS Café 2024");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 740, 130, -1));
+
+        Show.setFont(new java.awt.Font("Garamond", 1, 11)); // NOI18N
+        Show.setForeground(new java.awt.Color(102, 51, 0));
+        Show.setText("Show");
+        Show.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ShowActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Show, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 60, 20));
+
+        Hide.setFont(new java.awt.Font("Garamond", 1, 11)); // NOI18N
+        Hide.setForeground(new java.awt.Color(102, 51, 0));
+        Hide.setText("Hide");
+        Hide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HideActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Hide, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, 60, 20));
+
+        jLabel11.setFont(new java.awt.Font("Garamond", 1, 18)); // NOI18N
+        jLabel11.setText("+880");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 40, 30));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Login_Page_01_edit.PNG"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -295,10 +333,23 @@ public class Signup extends javax.swing.JFrame {
         new Login().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        setVisible(false);
-        new ForgotPassword().setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void txtMobileNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMobileNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMobileNumberActionPerformed
+
+    private void ShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowActionPerformed
+        // TODO add your handling code here:
+        Show.setVisible(false);
+        Hide.setVisible(true);
+        txtPassword.setEchoChar((char)0);
+    }//GEN-LAST:event_ShowActionPerformed
+
+    private void HideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HideActionPerformed
+        // TODO add your handling code here:
+        Show.setVisible(true);
+        Hide.setVisible(false);
+        txtPassword.setEchoChar('*');
+    }//GEN-LAST:event_HideActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -333,12 +384,15 @@ public class Signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Hide;
+    private javax.swing.JButton Show;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSave;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
