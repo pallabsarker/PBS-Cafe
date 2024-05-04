@@ -1,6 +1,6 @@
 # Café Management System
 ## Name: PBS Café
-**I have designed and developed a Café management system named PBS Café to
+**I have designed and developed a Café management system named "PBS Café" to
 streamline operations for both in-store and online customers. The system offers a
 user-friendly interface for both customer and admin portals. This project aimed to
 create a comprehensive and user-friendly solution to improve café efficiency and
